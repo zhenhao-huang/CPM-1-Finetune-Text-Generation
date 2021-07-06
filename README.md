@@ -98,6 +98,7 @@
 * MODEL_NAME # 模型名字
 * TOKENIZER_PATH # tokenizer 的路径
 * NLAYERS # 加载模型层数
+
 如果显存不足，可以减小`NLAYERS`的层数。训练完成后，**微调模型**会在`results/`目录下。
 ## Result
 ### 歌词
