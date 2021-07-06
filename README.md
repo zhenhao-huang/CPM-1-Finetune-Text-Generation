@@ -34,7 +34,7 @@
     文本内容
 ## Fine-Tune
 ### 数据预处理
-如果显存不足，可以减小`preprocess_lyric_template.py`、`preprocess_novel_template.py`设定的`max_length`超参数。
+如果显存不足，可以减小`preprocess_lyric_template.py`、`preprocess_novel_template.py`设定的`max_length`超参数，**限制输入序列长度**。
 #### 歌词
 在`data`目录下创建`data/lyric/preprocess`和`data/lyric/preprocessed_id/train_dev_test_text`。在`data/lyric/preprocess`目录下放置**一份**清洗好的`歌词数据.txt`，**歌词文本**格式为：
     
