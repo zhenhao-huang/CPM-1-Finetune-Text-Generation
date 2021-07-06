@@ -1,7 +1,7 @@
 # CPM-1-Finetune-Text-Generation
 **CPM (Chinese Pretrained Models)** 是北京智源人工智能研究院和清华大学研究团队合作开展的大规模预训练模型。本项目微调了**CPM-LM**(2.6B)模型，用于**短文本生成**和**长文本生成**，具体任务对应于**歌词**和**小说**。[[CPM官网](https://cpm.baai.ac.cn/)][[模型下载](https://cpm.baai.ac.cn/download.html)][[技术报告](https://arxiv.org/abs/2012.00413)][[项目源码](https://github.com/TsinghuaAI/CPM-1-Finetune)]
 
-本项目是在两张`3090`,即总共`48g`显存下微调。保证效果的前提下，最多也只能加载**CPM**的`27layer`。显存足够的玩家，可以按以下方法加载**CPM**到`32layer`训练。最后可以使用[**无限生成脚本**](https://github.com/zhenhao-huang/CPM-1-Text-Generation-Unlimit)生成结果。
+本项目是在两张`3090`，即总共`48g`显存下微调。保证效果的前提下，最多也只能加载**CPM**的`27layer`。显存足够的玩家，可以按以下方法加载**CPM**到`32layer`训练。最后可以使用[**无限生成脚本**](https://github.com/zhenhao-huang/CPM-1-Text-Generation-Unlimit)生成结果。
 ## Download
 下载模型后，将**80000文件**放置于`path_v2/to/CPM`目录下，模型目录结构如下：
 
