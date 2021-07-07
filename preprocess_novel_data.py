@@ -1,5 +1,9 @@
 import json
 import glob
+import os
+
+os.makedirs('./data/novel/preprocess', exist_ok=True)
+os.makedirs('./data/novel/preprocessed_id/train_dev_test_text', exist_ok=True)
 
 # 清洗数据
 # symbol = ["。", "”", "：", "…", "？", "！", "）", "—", ".", "?", "，", "\"", "；", "．", ":", "", "、", "“", "’", "!", "】",

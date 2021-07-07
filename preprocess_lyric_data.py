@@ -1,4 +1,8 @@
 import json
+import os
+
+os.makedirs('./data/lyric/preprocess', exist_ok=True)
+os.makedirs('./data/lyric/preprocessed_id/train_dev_test_text', exist_ok=True)
 
 # 预处理为列表文本，preprocess格式为[["一行歌词", ..., "一行歌词"], ["一行歌词", ..., "一行歌词"], ["一行歌词", ..., "一行歌词"]]
 preprocess = []
