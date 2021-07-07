@@ -36,7 +36,7 @@
 ### 4.1 数据预处理
 如果显存不足，可以减小`preprocess_lyric_template.py`、`preprocess_novel_template.py`设定的`max_length`超参数，**限制输入序列长度**。
 #### 歌词
-在`data`目录下创建`data/lyric/preprocess`和`data/lyric/preprocessed_id/train_dev_test_text`。在`data/lyric/preprocess`目录下放置**一份**清洗好的`歌词数据.txt`，**歌词文本**格式为：
+创建`data/lyric/preprocess`目录，在该目录下放置**一份**清洗好的`歌词数据.txt`，**歌词文本**格式为：
     
     第一行文本
     第二行文本
@@ -66,7 +66,7 @@
     [第一行文本id, 7, 第二行文本id, 7, 第三行文本id, 7,...7]
 每行**文本id**后面会接`<eod>`token，直到达到最大输入序列`1024`的长度，换行继续生成**文本id**。
 #### 小说
-在`data`目录下创建`data/novel/preprocess`和`data/novel/preprocessed_id/train_dev_test_text`。在`data/novel/preprocess`目录下放置清洗好的`小说数据.txt`，**小说文本**格式为：
+创建`data/novel/preprocess`目录，在该目录下放置清洗好的`小说数据.txt`，**小说文本**格式为：
 
     段落
     \n
