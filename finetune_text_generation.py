@@ -53,16 +53,16 @@ class TextDataset(torch.utils.data.Dataset):
 
     def process(self, data):
         samples, sizes = [], []
-        for d in tqdm(data[:int(self.ratio * len(data))], disable=(torch.distributed.get_rank() != 0)):
-            # only use the loss of the last token
-            loss_mask = [1] * (len(d) - 1)
+        for sample in tqdm(data[:int(self.ratio * len(data))], disable=(torch.distributed.get_rank() != 0)):
+            # use the loss of the whole token
+            loss_mask = [1] * (len(sample) - 1)
 
             samples.append({
-                "input_ids": d[:-1],  # ids for the tokenized sentence
+                "input_ids": sample[:-1],  # ids for the tokenized sentence
                 "loss_mask": loss_mask,  # mask of the loss
-                "labels": d[1:],  # token labels of each sentence
+                "labels": sample[1:],  # token labels of each sentence
             })
-            sizes.append(len(d) - 1)
+            sizes.append(len(sample) - 1)
 
         return samples, sizes
 
